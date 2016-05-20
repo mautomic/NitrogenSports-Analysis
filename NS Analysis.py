@@ -10,7 +10,7 @@
 # Win/Lose
 # Sport
 # Subcategory
-# Betslip ID
+# 9: Betslip ID
 
 # for parlays -------
 # Individual Risk/Winnings 0.0
@@ -22,7 +22,45 @@
 # Winnings BTC
 
 
-f = open('NS Wagers.txt', 'r')
+f = open('NS Wagers 5-19-16.txt', 'r')
 
-s = f.read()
-print s
+betslips = []
+temp = []
+
+for line in f:
+	line = line.strip('\n')
+	# print line
+
+	if len(line) is not 0:
+		temp.append(line)
+	else:
+		betslips.append(temp)
+		temp = []
+
+bets = [x for x in betslips if x]
+
+for elem in bets:
+	print elem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
