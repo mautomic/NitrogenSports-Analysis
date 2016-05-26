@@ -39,9 +39,18 @@ for line in f:
 
 bets = [x for x in betslips if x]
 
+xyla = 0
+
 for elem in bets:
+	xyla = xyla + 1
 	print elem
 
+print xyla
+
+# Filter by Sport
+# Odd Range
+# Bet range
+# Win/lose percentages
 
 
 
