@@ -22,7 +22,7 @@
 # Winnings BTC
 
 
-f = open('NS Wagers 5-19-16.txt', 'r')
+f = open('NS Wagers 3-31-17.txt', 'r')
 
 betslips = []
 temp = []

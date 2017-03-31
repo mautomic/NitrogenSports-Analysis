@@ -1,4 +1,1142 @@
 
+Brooklyn Nets v Detroit Pistons
+Game: under 215
+1.887
+0.00300000
+0.00266000
+win
+Basketball
+NBA
+10094720151
+
+
+
+Cleveland Cavaliers v Chicago Bulls
+Game: Cleveland Cavaliers -6
+1.987
+0.00300000
+0.00296000
+lose
+Basketball
+NBA
+10094720090
+
+
+
+Kevin Love (CLE) Rebounds Over 8.5 v Kevin Love (CLE) Rebounds Under 8.5
+Game: Kevin Love (CLE) Rebounds Over 8.5
+1.550
+0.00300000
+0.00165000
+win
+Basketball
+NBA Player Props
+10094715503
+
+
+
+Golden State Warriors v San Antonio Spurs
+Game: Golden State Warriors ML
+2.630
+0.00400000
+0.00652000
+win
+Basketball
+NBA
+10094680990
+
+
+
+Kawhi Leonard (SA) Rebounds Over 5.5 v Kawhi Leonard (SA) Rebounds Under 5.5
+Game: Kawhi Leonard (SA) Rebounds Over 5.5
+1.660
+0.00700000
+0.00462000
+win
+Basketball
+NBA Player Props
+10094680509
+
+
+
+Golden State Warriors v Houston Rockets
+Game: Golden State Warriors -1
+2.037
+0.00600000
+0.00622000
+win
+Basketball
+NBA
+10094624905
+
+
+
+Cleveland Cavaliers v San Antonio Spurs
+Game: Cleveland Cavaliers ML
+2.719
+0.00200000
+0.00344000
+lose
+Basketball
+NBA
+10094601589
+
+
+
+Oklahoma City Thunder v Dallas Mavericks
+Game: Oklahoma City Thunder -2
+2.037
+0.00500000
+0.00519000
+lose
+Basketball
+NBA
+10094578831
+
+
+
+Memphis Grizzlies v Golden State Warriors
+Game: Golden State Warriors -10.5
+1.793
+0.00300000
+0.00238000
+win
+Basketball
+NBA
+10094570207
+
+
+
+Miami Heat v Boston Celtics
+Game: Boston Celtics -6
+1.930
+0.00300000
+0.00279000
+lose
+Basketball
+NBA
+10094566319
+
+
+
+Oklahoma City Thunder v Houston Rockets
+Game: Oklahoma City Thunder +5.5
+1.921
+0.00300000
+0.00276000
+lose
+Basketball
+NBA
+10094558427
+
+
+
+South Carolina v Florida
+Game: Florida -3
+1.964
+0.00300000
+0.00289000
+lose
+Basketball
+NCAA
+10094554292
+
+
+
+Oregon LIVE v Kansas LIVE
+Game: Oregon LIVE -9.5
+1.950
+0.00320000
+0.00304000
+win
+In-Play Live
+NCAA Basketball
+10094528799
+
+
+
+Utah Jazz v Los Angeles Clippers
+Game: Utah Jazz +4
+2.017
+0.00300000
+0.00305000
+lose
+Basketball
+NBA
+10094511352
+
+
+
+UCLA v Kentucky
+Game: Kentucky ML
+2.073
+0.00200000
+0.00215000
+win
+Basketball
+NCAA
+10094465498
+
+
+
+Wisconsin v Florida
+Game: Florida -1
+1.954
+0.00420000
+0.00401000
+push
+Basketball
+NCAA
+10094465446
+
+
+
+Denver Nuggets v Indiana Pacers
+Game: Denver Nuggets ML
+2.017
+0.00300000
+0.00305000
+win
+Basketball
+NBA
+10094465207
+
+
+
+Detroit Pistons v Chicago Bulls
+Game: Detroit Pistons ML
+1.888
+0.00300000
+0.00266000
+lose
+Basketball
+NBA
+10094378605
+
+
+
+Golden State Warriors v Oklahoma City Thunder
+Game: Golden State Warriors -3
+2.106
+0.01500000
+0.01659000
+win
+Basketball
+NBA
+10094269240
+
+
+
+Milwaukee Bucks v Golden State Warriors
+Game: Milwaukee Bucks +11
+1.720
+0.00350000
+0.00252000
+lose
+Basketball
+NBA
+10094233869
+
+
+
+San Antonio Spurs v Memphis Grizzlies
+Game: San Antonio Spurs ML
+1.584
+0.00400000
+0.00234000
+lose
+Basketball
+NBA
+10094225398
+
+
+
+Houston Rockets v New Orleans Pelicans
+Game: Houston Rockets ML
+1.376
+0.00400000
+0.00150000
+lose
+Basketball
+NBA
+10094152308
+
+
+
+Utah Jazz v Cleveland Cavaliers
+Game: Utah Jazz +8
+1.948
+0.00320000
+0.00303000
+push
+Basketball
+NBA
+10094093437
+
+
+
+Oklahoma City Thunder v Toronto Raptors
+Game: Oklahoma City Thunder +2
+1.895
+0.00400000
+0.00358000
+win
+Basketball
+NBA
+10094093197
+
+
+
+San Antonio Spurs v Oklahoma City Thunder
+Game: San Antonio Spurs -2
+1.848
+0.00600000
+0.00509000
+lose
+Basketball
+NBA
+10093727693
+
+
+
+Golden State Warriors v New York Knicks
+Game: Golden State Warriors -9.5
+1.826
+0.00500000
+0.00413000
+lose
+Basketball
+NBA
+10093544639
+
+
+
+Detroit Red Wings v Vancouver Canucks
+Game: under 4.5
+2.686
+0.01000000
+0.01686000
+lose
+Hockey
+NHL OT Included
+Detroit Red Wings v Vancouver Canucks
+Game: over 5.5
+2.686
+0.01000000
+0.01686000
+lose
+Hockey
+NHL OT Included
+10093309308
+
+
+
+Vanderbilt v Kentucky
+Game: Kentucky ML
+1.156
+0.00000000
+0.00000000
+win
+Basketball
+NCAA
+Golden State Warriors v Washington Wizards
+Game: Golden State Warriors ML
+1.307
+0.00000000
+0.00000000
+lose
+Basketball
+NBA
+Indiana U v Purdue
+Game: Purdue ML
+1.142
+0.00000000
+0.00000000
+win
+Basketball
+NCAA
+10093296617
+PARLAY
+1.725
+0.00420000 BTC
+0.00305000 BTC
+
+
+Golden State Warriors v Washington Wizards
+Game: Golden State Warriors -5.5
+1.848
+0.00600000
+0.00509000
+lose
+Basketball
+NBA
+10093286927
+
+
+
+Pacers LIVE v Rockets LIVE
+Game: under 225.5
+1.830
+0.00300000
+0.00249000
+win
+In-Play Live
+NBA Basketball
+10093268503
+
+
+
+Ottawa Senators v Tampa Bay Lightning
+Game: over 5.5
+2.089
+0.00700000
+0.00762000
+win
+Hockey
+NHL OT Included
+Ottawa Senators v Tampa Bay Lightning
+Game: under 4.5
+3.253
+0.00450000
+0.01014000
+lose
+Hockey
+NHL OT Included
+10093260108
+
+
+
+Toronto Raptors v New York Knicks
+Game: Toronto Raptors -3
+1.841
+0.00500000
+0.00421000
+lose
+Basketball
+NBA
+10093259533
+
+
+
+Chris Paul (LA) Assists v Chris Paul (LA) Assists
+Game: over 8.5
+1.580
+0.00800000
+0.00464000
+win
+Basketball
+NBA Player Props
+10093227374
+
+
+
+James Harden (HOU) Points v James Harden (HOU) Points
+Game: over 11.5
+1.870
+0.01000000
+0.00870000
+cancel
+Basketball
+NBA Player Props
+10093178184
+
+
+
+Chicago Bulls v Cleveland Cavaliers
+Game: Chicago Bulls ML
+3.233
+0.00450000
+0.01005000
+win
+Basketball
+NBA
+10093178110
+
+
+
+Kansas v Texas
+Game: Kansas -9
+2.013
+0.00500000
+0.00507000
+win
+Basketball
+NCAA
+10093168907
+
+
+
+Brooklyn Nets v Golden State Warriors
+Game: Brooklyn Nets +21
+1.895
+0.00700000
+0.00627000
+win
+Basketball
+NBA
+10093168828
+
+
+
+San Antonio Spurs v Los Angeles Clippers
+Game: San Antonio Spurs -2.5
+1.743
+0.00610000
+0.00453000
+win
+Basketball
+NBA
+10093119144
+
+
+
+Los Angeles Clippers v Golden State Warriors
+Game: Golden State Warriors -13.5
+1.968
+0.00600000
+0.00581000
+lose
+Basketball
+NBA
+10093085849
+
+
+
+New England Patriots v Atlanta Falcons
+Game: New England Patriots ML
+1.710
+0.09679000
+0.06872000
+win
+Football
+NFL
+10092267601
+
+
+
+Green Bay Packers v Atlanta Falcons
+Game: Green Bay Packers ML
+3.243
+0.02360000
+0.05293000
+lose
+Football
+NFL
+10091642837
+
+
+
+Green Bay Packers v Atlanta Falcons
+Game: Green Bay Packers ML
+2.964
+0.05100000
+0.10016000
+lose
+Football
+NFL
+10091529607
+
+
+
+Packers LIVE v Cowboys LIVE
+Game: Packers LIVE -4.5
+1.900
+0.01000000
+0.00900000
+lose
+In-Play Live
+NFL Football
+10091340787
+
+
+
+Green Bay Packers v Dallas Cowboys
+Game: Green Bay Packers ML
+3.004
+0.01400000
+0.02806000
+win
+Football
+NFL
+10091336287
+
+
+
+Seattle Seahawks v Atlanta Falcons
+Game: Seattle Seahawks ML
+3.303
+0.02800000
+0.06448000
+lose
+Football
+NFL
+10091259243
+
+
+
+Clemson v Alabama
+Game: Alabama ML
+1.435
+0.01800000
+0.00783000
+lose
+Football
+NCAA
+10091085827
+
+
+
+Golden State Warriors v Cleveland Cavaliers
+Game: Golden State Warriors ML
+2.149
+0.38300000
+0.44007000
+lose
+Basketball
+NBA
+10084330308
+
+
+
+Execration v MVP Phoenix
+Match: MVP Phoenix ML
+1.219
+0.21800000
+0.04774000
+lose
+eSports
+Dota 2 - Nanyang Championship
+10084305329
+
+
+
+Coco Vandeweghe (-1.5 Sets) v Agnieszka Radwanska (+1.5 Sets)
+Match: Agnieszka Radwanska (+1.5 Sets) ML
+1.195
+0.18320000
+0.03572000
+win
+Tennis
+WTA Birmingham - R1
+10084267338
+
+
+
+Cleveland Cavaliers +2.5 v Golden State Warriors -2.5
+Game: Golden State Warriors -2.5 ML
+1.836
+0.39000000
+0.32604000
+lose
+Basketball
+In Play NBA
+10084256076
+
+
+
+Taylor Fritz (+1.5 Sets) v Yuichi Sugita (-1.5 Sets)
+Match: Taylor Fritz (+1.5 Sets) ML
+1.225
+0.14500000
+0.03263000
+win
+Tennis
+ATP Halle - R1
+10084239627
+
+
+
+Nicolas Mahut (+1.5 Sets) v Gilles Muller (-1.5 Sets)
+Match: Nicolas Mahut (+1.5 Sets) ML
+1.335
+0.10000000
+0.03350000
+win
+Tennis
+ATP Hertogenbosch - Final
+10084218428
+
+
+
+Afreeca Freecs v SK Telecom T1
+Match: SK Telecom T1 ML
+1.276
+0.14500000
+0.04002000
+lose
+eSports
+Starcraft 2 - SK Telecom Proleague
+10084182815
+
+
+
+Golden State Warriors v Cleveland Cavaliers
+Game: Golden State Warriors ML
+2.198
+0.25100000
+0.30070000
+win
+Basketball
+NBA
+10084177090
+
+
+
+Evgueni Chtchetinine (BLR) v Alvaro Robles (ESP)
+Match: Evgueni Chtchetinine (BLR) ML
+1.286
+0.20000000
+0.05720000
+lose
+Table Tennis
+Challenger Series - Men
+10084153487
+
+
+
+SharksPenguins Over 7.5 v SharksPenguins Under 7.5
+Game: SharksPenguins Under 7.5 ML
+1.336
+0.05000000
+0.01680000
+win
+Hockey
+IN Game NHL
+10084151606
+
+
+
+China v Canada
+Game: Canada ML
+1.328
+0.15500000
+0.05084000
+win
+Basketball
+World - International Friendlies Women
+10084137236
+
+
+
+Saint Gaming v Snake
+Match: Snake ML
+1.124
+0.24200000
+0.03001000
+win
+eSports
+League of Legends - Tencent LoL Pro League
+10084130258
+
+
+
+Golden State Warriors v Cleveland Cavaliers
+Game: Golden State Warriors ML
+2.021
+0.01000000
+0.01021000
+lose
+Basketball
+NBA
+10084126620
+
+
+
+Marin Cilic (+1.5 Sets) v Radek Stepanek (-1.5 Sets)
+Match: Marin Cilic (+1.5 Sets) ML
+1.209
+0.30000000
+0.06270000
+lose
+Tennis
+ATP Stuttgart - R16
+10084112803
+
+
+
+Symbol v Patience
+Match: Patience ML
+1.494
+0.22300000
+0.11016000
+win
+eSports
+Starcraft 2 - Global StarCraft 2 League
+10084103489
+
+
+
+Antonio Massara v Marko Tepavac
+Match: Marko Tepavac ML
+1.159
+0.38000000
+0.06042000
+win
+Tennis
+ATP Challenger Caltanissetta - R1
+10084087753
+
+
+
+Bulgaria v Denmark
+Match: under 3
+1.643
+0.19000000
+0.12217000
+lose
+Soccer
+International - Kirin Cup
+10084077917
+
+
+
+Penguins -1.5 v Sharks +1.5
+Game: Sharks +1.5 ML
+1.640
+0.03200000
+0.02048000
+lose
+Hockey
+In Play NHL OT Included
+10084075899
+
+
+
+Cleveland Cavaliers v Golden State Warriors
+Game: Golden State Warriors ML
+1.386
+0.20000000
+0.07720000
+win
+Basketball
+NBA
+10084054356
+
+
+
+LAA Angels v Pittsburgh Pirates
+Game: LAA Angels -1.5
+3.024
+0.00300000
+0.00607000
+lose
+Baseball
+MLB Alternate Runlines
+LAA Angels v Pittsburgh Pirates
+Game: Pittsburgh Pirates -1.5
+2.636
+0.00300000
+0.00491000
+lose
+Baseball
+MLB
+10084045179
+
+
+
+Milwaukee Brewers v Philadelphia Phillies
+Game: Philadelphia Phillies ML
+1.601
+0.00500000
+0.00301000
+win
+Baseball
+MLB
+10084045107
+
+
+
+St Kilda v Adelaide Crows
+Game: Adelaide Crows ML
+1.145
+0.10000000
+0.01450000
+win
+Aussie Rules
+Aussie Rules Football (AFL)
+10084034337
+
+
+
+Atlanta Braves v Los Angeles Dodgers
+Game: Los Angeles Dodgers -2
+1.804
+0.03000000
+0.02412000
+win
+Baseball
+MLB
+10084026004
+
+
+
+Pittsburgh Penguins v San Jose Sharks
+Game: San Jose Sharks ML
+1.657
+0.05000000
+0.03285000
+win
+Hockey
+NHL OT Included
+10084025600
+
+
+
+EuroMillions five number sum over 100.5 v EuroMillions 2016-06-03 draw will have a total sum of all five numbers Over/Under
+Game: EuroMillions five number sum over 100.5
+1.200
+0.05000000
+0.01000000
+win
+Lottery Odds
+EuroMillions - Props
+10083989693
+
+
+
+Arizona Diamondbacks v Chicago Cubs
+Game: Chicago Cubs ML
+1.393
+0.00255000
+0.00100000
+win
+Baseball
+MLB
+10083989633
+
+
+
+Away Runs v Home Runs
+Game: under 129.5
+1.990
+0.00300000
+0.00297000
+win
+Baseball
+MLB
+10083989602
+
+
+
+S. Appleby v R. Henley
+Matchups: R. Henley ML
+1.631
+0.00500000
+0.00316000
+win
+Golf
+The Memorial Tournament - 2nd Round
+10083987317
+
+
+
+Cleveland Cavaliers v Golden State Warriors
+Game: Golden State Warriors ML
+1.413
+0.22000000
+0.09086000
+win
+Basketball
+NBA
+10083972890
+
+
+
+Arizona Diamondbacks v Houston Astros
+Game: Houston Astros -1.5
+2.726
+0.00300000
+0.00518000
+lose
+Baseball
+MLB
+Arizona Diamondbacks v Houston Astros
+Game: Arizona Diamondbacks -1.5
+3.120
+0.00300000
+0.00636000
+win
+Baseball
+MLB Alternate Runlines
+10083962400
+
+
+
+Away Runs v Home Runs
+Game: over 132.5
+1.899
+0.01200000
+0.01079000
+lose
+Baseball
+MLB
+10083935574
+
+
+
+Los Angeles Dodgers v Chicago Cubs
+Game: Chicago Cubs ML
+1.468
+0.00900000
+0.00421000
+lose
+Baseball
+MLB
+10083922032
+
+
+
+Away Runs v Home Runs
+Game: under 129.5
+1.980
+0.00200000
+0.00196000
+lose
+Baseball
+MLB
+10083915234
+
+
+
+Oklahoma City Thunder v Golden State Warriors
+Game: Golden State Warriors ML
+1.288
+0.35000000
+0.10080000
+win
+Basketball
+NBA
+10083899845
+
+
+
+Philadelphia Phillies v Chicago Cubs
+Game: Chicago Cubs ML
+1.484
+0.00800000
+0.00387000
+win
+Baseball
+MLB
+10083866067
+
+
+
+Golden State Warriors v Oklahoma City Thunder
+Game: Golden State Warriors ML
+2.326
+0.10000000
+0.13260000
+win
+Basketball
+NBA
+10083836168
+
+
+
+Toronto Raptors v Cleveland Cavaliers
+Game: Toronto Raptors ML
+7.116
+0.01650000
+0.10091000
+lose
+Basketball
+NBA
+10083765917
+
+
+
+Golden State Warriors v Oklahoma City Thunder
+Game: Golden State Warriors -2.5
+2.060
+0.10000000
+0.10600000
+lose
+Basketball
+NBA
+10083735042
+
+
+
+Golden State Warriors v Oklahoma City Thunder
+Game: Golden State Warriors -2
+1.882
+0.10000000
+0.08820000
+lose
+Basketball
+NBA
+10083685618
+
+
+
+Essendon Bombers v St Kilda
+Game: Essendon Bombers +35.5
+1.979
+0.00400000
+0.00392000
+lose
+Aussie Rules
+Aussie Rules Football (AFL)
+10083665212
+
+
+
+Away Runs v Home Runs
+Game: under 126.5
+1.899
+0.00500000
+0.00450000
+lose
+Baseball
+MLB
+10083622674
+
+
+
+Dusan Lajovic v Joris De Loore
+Match: Dusan Lajovic ML
+1.293
+0.00000000
+0.00000000
+lose
+Tennis
+ATP Challenger Mestre - QF
+Signature v TheMongolz
+Match: TheMongolz ML
+1.260
+0.00000000
+0.00000000
+win
+eSports
+CS:GO - World Cyber Arena
+Elise Mertens v Sorana Cirstea
+Match: Sorana Cirstea ML
+1.134
+0.00000000
+0.00000000
+win
+Tennis
+WTA French Open - Qualifiers
+10083606877
+PARLAY
+1.847
+0.00500000 BTC
+0.00424000 BTC
+
+
+Colorado Rockies v St Louis Cardinals
+Game: over 19
+1.513
+0.01000000
+0.00513000
+win
+Baseball
+MLB (LIVE)
+10083598664
+
+
+
 Kristina Kucova v Miyu Kato
 Match: Kristina Kucova ML
 1.050
