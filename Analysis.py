@@ -25,7 +25,41 @@
 # Program starts here
 def main():
 
+  # get data organized in list
   betslips = getData()
+
+  # separate data into CloudBet and NitrogenSports
+  cloudBets = []
+  nitroBets = []
+
+  for bet in betslips:
+    if (bet[0] == "WIN" or bet[0] == "LOSS" or bet[0] == "PUSH"):
+      cloudBets.append(bet)
+    else:
+      nitroBets.append(bet)
+
+
+def getRecord(sport, betType, cloudList, nitroList):
+
+  wins = 0
+  losses = 0
+  netProfit = 0
+
+  if (betType == "ML"):
+    # ML Analysis
+    print ('a')
+
+  elif (betType == "Spread"):
+    # Spread Analysis
+    print ('a')
+
+  elif (betType == "OverUnder"):
+    # OverUnder Analysis
+    print ('a')
+
+  elif (betType == "PlayerProps"):
+    # Prop Analysis
+    print ('a')
 
 
 # Function to open file of data and parse it into a list of betslips
