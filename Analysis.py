@@ -1,7 +1,7 @@
 # Nitrogen Sports Betting Analysis
 # Built by Sports Betting God Maurya
 
-# Format of Betslip ----------
+# Format of NS Betslip ----------
 # Game
 # Game Prediction
 # Odds
@@ -12,7 +12,7 @@
 # Subcategory
 # 9: Betslip ID
 
-# for parlays -------
+# Format of NS parlays -------
 # Individual Risk/Winnings 0.0
 # 8 lines then start next bet (8 lines)...and etc
 # Betslip ID
@@ -22,54 +22,39 @@
 # Winnings BTC
 
 
-f = open('NS Wagers 3-31-17.txt', 'r')
+# Program starts here
+def main():
 
-betslips = []
-temp = []
+  betslips = getData()
 
-for line in f:
-	line = line.strip('\n')
-	# print line
 
-	if len(line) is not 0:
-		temp.append(line)
-	else:
-		betslips.append(temp)
-		temp = []
+# Function to open file of data and parse it into a list of betslips
+def getData():
 
-bets = [x for x in betslips if x]
+  f = open('NS Wagers 3-31-17.txt', 'r')
 
-xyla = 0
+  betslips = []
+  temp = []
 
-for elem in bets:
-	xyla = xyla + 1
-	print elem
+  for line in f:
+  	line = line.strip('\n')
 
-print xyla
+  	if len(line) is not 0:
+  		temp.append(line)
+  	else:
+  		betslips.append(temp)
+  		temp = []
 
+  # to remove empty lists (spaces)
+  bets = [x for x in betslips if x]
+  return bets
+
+
+# TODO
 # Filter by Sport
 # Odd Range
 # Bet range
 # Win/lose percentages
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+if __name__ == '__main__':
+  main()
