@@ -1,3 +1,43 @@
+WIN
+NBA
+0.01107
+EVENT
+Golden State Warriors v Houston Rockets
+SELECTION
+Golden State Warriors 
+STAKE
+0.009
+PRICE
+1.230
+STATE
+Completed
+TYPE
+Straight
+
+
+
+San Antonio Spurs v Oklahoma City Thunder
+Game: San Antonio Spurs -3
+1.921
+0.00400000
+0.00368000
+win
+Basketball
+NBA
+10094758873
+
+
+
+Denver Nuggets v Charlotte Hornets
+Game: Charlotte Hornets -2
+1.863
+0.00300000
+0.00259000
+win
+Basketball
+NBA
+
+
 
 Brooklyn Nets v Detroit Pistons
 Game: under 215
