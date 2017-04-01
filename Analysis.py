@@ -21,6 +21,7 @@
 # Risk BTC
 # Winnings BTC
 
+BTC = 1075
 
 # Program starts here
 def main():
@@ -38,7 +39,13 @@ def main():
 		else:
 			nitroBets.append(bet)
 
-	getRecord("NBA", "OverUnder", cloudBets, nitroBets)
+
+	# Filter what you want
+	#######################################
+
+	getRecord("NBA", "All", cloudBets, nitroBets)
+
+	#######################################
 
 
 def getRecord(sport, betType, cloudList, nitroList):
@@ -46,7 +53,8 @@ def getRecord(sport, betType, cloudList, nitroList):
 	wins = 0
 	losses = 0
 	pushes = 0
-	netProfit = 0
+	betSize = 0.0
+	netProfit = 0.0
 
 	if betType == "All":
 
@@ -55,8 +63,13 @@ def getRecord(sport, betType, cloudList, nitroList):
 			print cloud
 			if cloud[0] == "WIN":
 				wins = wins + 1
+				betSize = betSize + float(cloud[8])
+				netProfit = netProfit - float(cloud[8])
+				netProfit = netProfit + float(cloud[2])
 			if cloud[0] == "LOSS":
 				losses = losses + 1
+				betSize = betSize + float(cloud[7])
+				netProfit = netProfit - float(cloud[7])
 			if cloud[0] == "PUSH":
 				pushes = pushes + 1
 
@@ -66,8 +79,12 @@ def getRecord(sport, betType, cloudList, nitroList):
 		 		print nitro
 				if nitro[5] == "win":
 					wins = wins + 1
+					betSize = betSize + float(nitro[3])
+					netProfit = netProfit + float(nitro[4])
 				if nitro[5] == "lose":
 					losses = losses + 1
+					betSize = betSize + float(nitro[3])
+					netProfit = netProfit - float(nitro[3])
 				if nitro[5] == "push":
 					pushes = pushes + 1
 
@@ -79,8 +96,13 @@ def getRecord(sport, betType, cloudList, nitroList):
 				print cloud
 				if cloud[0] == "WIN":
 					wins = wins + 1
+					betSize = betSize + float(cloud[8])
+					netProfit = netProfit - float(cloud[8])
+					netProfit = netProfit + float(cloud[2])
 				if cloud[0] == "LOSS":
 					losses = losses + 1
+					betSize = betSize + float(cloud[7])
+					netProfit = netProfit - float(cloud[7])
 				if cloud[0] == "PUSH":
 					pushes = pushes + 1
 
@@ -91,8 +113,12 @@ def getRecord(sport, betType, cloudList, nitroList):
 			 		print nitro
 					if nitro[5] == "win":
 						wins = wins + 1
+						betSize = betSize + float(nitro[3])
+						netProfit = netProfit + float(nitro[4])
 					if nitro[5] == "lose":
 						losses = losses + 1
+						betSize = betSize + float(nitro[3])
+						netProfit = netProfit - float(nitro[3])
 					if nitro[5] == "push":
 						pushes = pushes + 1
 
@@ -104,8 +130,13 @@ def getRecord(sport, betType, cloudList, nitroList):
 				print cloud
 				if cloud[0] == "WIN":
 					wins = wins + 1
+					betSize = betSize + float(cloud[8])
+					netProfit = netProfit - float(cloud[8])
+					netProfit = netProfit + float(cloud[2]) 
 				if cloud[0] == "LOSS":
 					losses = losses + 1
+					betSize = betSize + float(cloud[7])
+					netProfit = netProfit - float(cloud[7])
 				if cloud[0] == "PUSH":
 					pushes = pushes + 1
 
@@ -116,8 +147,12 @@ def getRecord(sport, betType, cloudList, nitroList):
 			 		print nitro
 					if nitro[5] == "win":
 						wins = wins + 1
+						betSize = betSize + float(nitro[3])
+						netProfit = netProfit + float(nitro[4])
 					if nitro[5] == "lose":
 						losses = losses + 1
+						betSize = betSize + float(nitro[3])
+						netProfit = netProfit - float(nitro[3])
 					if nitro[5] == "push":
 						pushes = pushes + 1
 
@@ -130,13 +165,22 @@ def getRecord(sport, betType, cloudList, nitroList):
 			 		print nitro
 					if nitro[5] == "win":
 						wins = wins + 1
+						betSize = betSize + float(nitro[3])
+						netProfit = netProfit + float(nitro[4])
 					if nitro[5] == "lose":
 						losses = losses + 1
+						betSize = betSize + float(nitro[3])
+						netProfit = netProfit - float(nitro[3])
 					if nitro[5] == "push":
 						pushes = pushes + 1
 
+	print ' '
 	print (str(wins) + "-" + str(losses) + "-" + str(pushes))
-
+	print ("Total Bet Size : " + str(betSize) + " BTC")
+	print ("Total Profit : " + str(netProfit) + " BTC")
+	print ("Total Profit : $" + str(netProfit * BTC))
+	print ("ROI : " + str((((netProfit + betSize) - betSize)/betSize) * 100) + "%")
+	print ' '
 
 # Function to open file of data and parse it into a list of betslips
 def getData():
@@ -167,13 +211,6 @@ def getData():
 	# to remove empty lists (spaces)
 	bets = [x for x in betslips if x]
 	return bets
-
-
-# TODO
-# Filter by Sport
-# Odd Range
-# Bet range
-# Win/lose percentages
  
 if __name__ == '__main__':
 	main()
