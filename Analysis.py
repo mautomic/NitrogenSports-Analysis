@@ -74,7 +74,7 @@ def getRecord(sport, betType, cloudList, nitroList):
 				pushes = pushes + 1
 
 		for nitro in nitroList:
-		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props":
+		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props" or nitro[7] == "NCAA":
 
 		 		print nitro
 				if nitro[5] == "win":
@@ -107,7 +107,7 @@ def getRecord(sport, betType, cloudList, nitroList):
 					pushes = pushes + 1
 
 		for nitro in nitroList:
-		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props":
+		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props" or nitro[7] == "NCAA":
 		 		if "ML" in nitro[1]:
 			 		
 			 		print nitro
@@ -141,7 +141,7 @@ def getRecord(sport, betType, cloudList, nitroList):
 					pushes = pushes + 1
 
   		for nitro in nitroList:
-		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props":
+		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props" or nitro[7] == "NCAA":
 		 		if "+" in nitro[1] or "-" in nitro[1]: 
 			 		
 			 		print nitro
@@ -159,7 +159,7 @@ def getRecord(sport, betType, cloudList, nitroList):
   	elif (betType == "OverUnder"):
 
   		for nitro in nitroList:
-		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props":
+		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props" or nitro[7] == "NCAA":
 		 		if " over " in nitro[1] or " under " in nitro[1] or " Over " in nitro[1] or " Under " in nitro[1]:
 			 		
 			 		print nitro
