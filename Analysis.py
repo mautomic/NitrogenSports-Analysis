@@ -38,7 +38,7 @@ def main():
 		else:
 			nitroBets.append(bet)
 
-	getRecord("NBA", "All", cloudBets, nitroBets)
+	getRecord("NBA", "OverUnder", cloudBets, nitroBets)
 
 
 def getRecord(sport, betType, cloudList, nitroList):
@@ -61,8 +61,7 @@ def getRecord(sport, betType, cloudList, nitroList):
 				pushes = pushes + 1
 
 		for nitro in nitroList:
-		 	
-		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)":
+		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props":
 
 		 		print nitro
 				if nitro[5] == "win":
@@ -73,16 +72,68 @@ def getRecord(sport, betType, cloudList, nitroList):
 					pushes = pushes + 1
 
   	elif (betType == "ML"):
-  		print ('a')
+
+  		for cloud in cloudList:
+  			if "+" not in cloud[6] and "-" not in cloud[6]:
+
+				print cloud
+				if cloud[0] == "WIN":
+					wins = wins + 1
+				if cloud[0] == "LOSS":
+					losses = losses + 1
+				if cloud[0] == "PUSH":
+					pushes = pushes + 1
+
+		for nitro in nitroList:
+		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props":
+		 		if "ML" in nitro[1]:
+			 		
+			 		print nitro
+					if nitro[5] == "win":
+						wins = wins + 1
+					if nitro[5] == "lose":
+						losses = losses + 1
+					if nitro[5] == "push":
+						pushes = pushes + 1
 
   	elif (betType == "Spread"):
-	 	print ('a')
+
+  		for cloud in cloudList:
+  			if "+" in cloud[6] or "-" in cloud[6]:
+  				
+				print cloud
+				if cloud[0] == "WIN":
+					wins = wins + 1
+				if cloud[0] == "LOSS":
+					losses = losses + 1
+				if cloud[0] == "PUSH":
+					pushes = pushes + 1
+
+  		for nitro in nitroList:
+		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props":
+		 		if "+" in nitro[1] or "-" in nitro[1]: 
+			 		
+			 		print nitro
+					if nitro[5] == "win":
+						wins = wins + 1
+					if nitro[5] == "lose":
+						losses = losses + 1
+					if nitro[5] == "push":
+						pushes = pushes + 1
 
   	elif (betType == "OverUnder"):
-	 	print ('a')
 
-  	elif (betType == "PlayerProps"):
-	 	print ('a')
+  		for nitro in nitroList:
+		 	if nitro[7] == sport or nitro[7] == "NBA (LIVE)" or nitro[7] == "NBA Player Props":
+		 		if " over " in nitro[1] or " under " in nitro[1] or " Over " in nitro[1] or " Under " in nitro[1]:
+			 		
+			 		print nitro
+					if nitro[5] == "win":
+						wins = wins + 1
+					if nitro[5] == "lose":
+						losses = losses + 1
+					if nitro[5] == "push":
+						pushes = pushes + 1
 
 	print (str(wins) + "-" + str(losses) + "-" + str(pushes))
 
