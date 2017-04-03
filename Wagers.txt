@@ -1,3 +1,100 @@
+Atlanta Hawks v Brooklyn Nets
+Game: Brooklyn Nets +2
+1.987
+0.00300000
+0.00296000
+win
+Basketball
+NBA
+10094848255
+
+
+
+San Francisco Giants v Arizona Diamondbacks
+Game: San Francisco Giants ML
+1.687
+0.00300000
+0.00206000
+lose
+Baseball
+MLB
+10094847973
+
+
+
+Rudy Gobert (UTA) Points Over 15.5 v Rudy Gobert (UTA) Points Under 15.5
+Game: Rudy Gobert (UTA) Points Over 15.5
+2.000
+0.00300000
+0.00300000
+win
+Basketball
+NBA Player Props
+10094847096
+
+
+
+Charlotte Hornets v Oklahoma City Thunder
+Game: Charlotte Hornets +5
+1.968
+0.00300000
+0.00290000
+win
+Basketball
+NBA
+10094845807
+
+
+
+Oregon v North Carolina
+Game: North Carolina -4.5
+1.993
+0.00300000
+0.00298000
+lose
+Basketball
+NCAA
+10094805859
+
+
+
+Al-Farouq Aminu (POR) Points Over 9.5 v Al-Farouq Aminu (POR) Points Under 9.5
+Game: Al-Farouq Aminu (POR) Points Over 9.5
+1.600
+0.00500000
+0.00300000
+win
+Basketball
+NBA Player Props
+10094805725
+
+
+
+Orlando Magic v Brooklyn Nets
+Game: under 222
+1.948
+0.00300000
+0.00284000
+lose
+Basketball
+NBA
+10094799930
+
+
+
+South Carolina v Gonzaga
+Game: South Carolina +6.5
+1.918
+0.00300000
+0.00275000
+win
+Basketball
+NCAA
+10094799645
+
+
+
+
 WIN
 NBA
 0.01107
