@@ -198,10 +198,6 @@ def getData():
 		if "PHASE" in line:
 			break
 
-		# break to start after Super Bowl 51, continue for prior
-		if "OLD" in line:
-			break
-
 		# Parse out Blank lines and Parlays
 		if len(line) is not 0:
 			temp.append(line)
