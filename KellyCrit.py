@@ -5,7 +5,7 @@
 #       relying on the odds?
 
 # values in BTC
-bankroll = 0.087245
+bankroll = 0.10508
 betOdds = 1.948
 probSuccess = 1/(betOdds)
 probFailure = 1.0-probSuccess

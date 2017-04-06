@@ -1,3 +1,128 @@
+
+Oklahoma City Thunder v Memphis Grizzlies
+Game: Oklahoma City Thunder ML
+1.773
+0.00400000
+0.00309000
+win
+Basketball
+NBA
+10094988221
+
+
+
+Denver Nuggets v Houston Rockets
+Game: Denver Nuggets +7.5
+1.948
+0.00300000
+0.00284000
+win
+Basketball
+NBA
+10094987708
+
+
+
+Cleveland Cavaliers v Boston Celtics
+Game: Cleveland Cavaliers +3.5
+2.047
+0.00400000
+0.00419000
+win
+Basketball
+NBA
+10094987290
+
+
+
+Milwaukee Bucks v Oklahoma City Thunder
+Game: Milwaukee Bucks +5
+2.066
+0.00300000
+0.00320000
+lose
+Basketball
+NBA
+10094943070
+
+
+
+Chicago Bulls v New York Knicks
+Game: Chicago Bulls -4
+1.871
+0.00300000
+0.00261000
+lose
+Basketball
+NBA
+10094942176
+
+
+
+Toronto Raptors v Indiana Pacers
+Game: Toronto Raptors +2.5
+1.977
+0.00300000
+0.00293000
+lose
+Basketball
+NBA
+10094941773
+
+
+
+Brooklyn Nets v Philadelphia 76ers
+Game: Brooklyn Nets -2
+1.930
+0.00400000
+0.00372000
+win
+Basketball
+NBA
+10094941652
+
+
+LOSS
+NBA
+EVENT
+New Orleans Pelicans v Denver Nuggets
+SELECTION
+New Orleans Pelicans -3 
+STAKE
+0.003
+PRICE
+1.880
+STATE
+Completed
+TYPE
+Straight
+
+
+
+Joel Berry II (NC) Assists Over 2.5 v Joel Berry II (NC) Assists Under 2.5
+Game: Joel Berry II (NC) Assists Over 2.5
+1.562
+0.00200000
+0.00112000
+win
+Basketball
+NCAA Player Props
+10094899272
+
+
+
+North Carolina v Gonzaga
+Game: Gonzaga ML
+1.993
+0.00300000
+0.00298000
+lose
+Basketball
+NCAA
+10094899101
+
+
+
 Atlanta Hawks v Brooklyn Nets
 Game: Brooklyn Nets +2
 1.987
@@ -91,7 +216,6 @@ win
 Basketball
 NCAA
 10094799645
-
 
 
 
@@ -299,7 +423,7 @@ NCAA
 
 
 PUSH
-NBA
+NCAA
 0.0042
 EVENT
 North Carolina Tar Heels v Kentucky Wildcats
@@ -806,7 +930,7 @@ NBA
 
 
 
-PHASE --------------------- 2/5/17
+OLD --------------------- 2/5/17
 
 
 
