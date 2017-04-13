@@ -1,8 +1,8 @@
 
 # Use the Kelly Criterion to figure out optimal bet
 
-# TODO: How can we predict probability of the pick without 
-#       relying on the odds?
+# TODO: How can we predict probability of the bet without 
+#       relying on the odds? Build a custom model to value bets/predict scores
 
 # values in BTC
 bankroll = 0.10508

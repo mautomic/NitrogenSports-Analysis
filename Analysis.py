@@ -1,5 +1,4 @@
 # Nitrogen Sports Betting Analysis
-# Built by Sports Betting God Maurya
 
 # Format of NS Betslip ----------
 # Game
