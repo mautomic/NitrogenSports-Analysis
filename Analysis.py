@@ -1,5 +1,4 @@
 # Nitrogen Sports Betting Analysis
-# Built by Sports Betting God Maurya
 
 # Format of NS Betslip ----------
 # Game
@@ -21,6 +20,8 @@
 # Risk BTC
 # Winnings BTC
 
+
+# TODO: Retrieve Value Automatically
 BTC = 1150
 
 # Program starts here
