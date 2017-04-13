@@ -20,9 +20,11 @@
 # Risk BTC
 # Winnings BTC
 
+import requests
 
-# TODO: Retrieve Value Automatically
-BTC = 1150
+# Retrieve current Bitcoin spot price via Coinbase
+PRICE_JSON = requests.get('https://api.coinbase.com/v2/prices/spot?currency=USD')
+BTC = float(PRICE_JSON.json()['data']['amount'])
 
 # Program starts here
 def main():
