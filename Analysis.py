@@ -26,6 +26,8 @@ import requests
 PRICE_JSON = requests.get('https://api.coinbase.com/v2/prices/spot?currency=USD')
 BTC = float(PRICE_JSON.json()['data']['amount'])
 
+bankroll = 0.0
+
 
 def main():
 
@@ -35,18 +37,20 @@ def main():
     # Filter what you want
     #######################################
 
-    getRecord("NBA", "All", betslips)
+    getRecord("All", betslips)
 
     #######################################
 
 
-def getRecord(sport, betType, nitroList):
+def getRecord(betType, nitroList):
 
     wins = 0
     losses = 0
     pushes = 0
     betSize = 0.0
     netProfit = 0.0
+    unitSize = .003
+    units = 0.0
 
     if betType == "All":
 
@@ -57,10 +61,12 @@ def getRecord(sport, betType, nitroList):
                 wins = wins + 1
                 betSize = betSize + float(nitro[3])
                 netProfit = netProfit + float(nitro[4])
+                units = units + (float(nitro[4])/unitSize)
             if nitro[5] == "lose":
                 losses = losses + 1
                 betSize = betSize + float(nitro[3])
                 netProfit = netProfit - float(nitro[3])
+                units = units - (float(nitro[3])/unitSize)
             if nitro[5] == "push":
                 pushes = pushes + 1
 
@@ -75,10 +81,12 @@ def getRecord(sport, betType, nitroList):
                     wins = wins + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit + float(nitro[4])
+                    units = units + (float(nitro[4])/unitSize)
                 if nitro[5] == "lose":
                     losses = losses + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit - float(nitro[3])
+                    units = units - (float(nitro[3])/unitSize)
                 if nitro[5] == "push":
                     pushes = pushes + 1
 
@@ -93,10 +101,12 @@ def getRecord(sport, betType, nitroList):
                         wins = wins + 1
                         betSize = betSize + float(nitro[3])
                         netProfit = netProfit + float(nitro[4])
+                        units = units + (float(nitro[4])/unitSize)
                     if nitro[5] == "lose":
                         losses = losses + 1
                         betSize = betSize + float(nitro[3])
                         netProfit = netProfit - float(nitro[3])
+                        units = units - (float(nitro[3])/unitSize)
                     if nitro[5] == "push":
                         pushes = pushes + 1
 
@@ -111,20 +121,35 @@ def getRecord(sport, betType, nitroList):
                     wins = wins + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit + float(nitro[4])
+                    units = units + (float(nitro[4])/unitSize)
                 if nitro[5] == "lose":
                     losses = losses + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit - float(nitro[3])
+                    units = units - (float(nitro[3])/unitSize)
                 if nitro[5] == "push":
                     pushes = pushes + 1
 
+    posOrNeg = ""
+    if (units > 0):
+        posOrNeg = "+"
+
+    unitString = format(units, '.2f')
+
     print(' ')
     print(str(wins) + "-" + str(losses) + "-" + str(pushes))
-    print("Total Bet Size : " + str(betSize) + " BTC")
     print("Total Profit : " + str(netProfit) + " BTC")
     print("Total Profit : $" + str(netProfit * BTC))
     print("ROI : " + str((((netProfit + betSize) - betSize)/betSize) * 100) + "%")
+    print(posOrNeg + unitString + " units")
+    print("Bitcoin : $" + str(BTC))
+    print("Bankroll : $" + str(bankroll * BTC))
     print(' ')
+
+
+# Function to perform calculations
+def calculate(betslips):
+    return []
 
 
 # Function to format any non-NitrogenSports bets to proper style. 
@@ -144,6 +169,10 @@ def getData():
 
     for line in f:
         line = line.strip('\n')
+
+        # break to start after model following, continue for prior
+        if "PHASE" in line:
+            break
 
         # Parse out Blank lines and Parlays
         if len(line) is not 0:
