@@ -1,6 +1,6 @@
 # Nitrogen Sports Betting Analysis
 
-# Format of NS Betslip ----------
+# Format of NS Betslip ---------- list size 9
 # Game
 # Game Prediction
 # Odds
@@ -11,7 +11,7 @@
 # Subcategory
 # Betslip ID
 
-# Format of NS parlays -------
+# Format of NS parlays ------- list size 8x + 5, 21, 29
 # Individual Risk/Winnings 0.0
 # 8 lines then start next bet (8 lines)...and etc
 # Betslip ID
@@ -26,7 +26,7 @@ import requests
 PRICE_JSON = requests.get('https://api.coinbase.com/v2/prices/spot?currency=USD')
 BTC = float(PRICE_JSON.json()['data']['amount'])
 
-bankroll = 0.0
+bankroll = 0.13522
 
 
 def main():
@@ -57,18 +57,32 @@ def getRecord(betType, nitroList):
         for nitro in nitroList:
 
             print(nitro)
-            if nitro[5] == "win":
-                wins = wins + 1
-                betSize = betSize + float(nitro[3])
-                netProfit = netProfit + float(nitro[4])
-                units = units + (float(nitro[4])/unitSize)
-            if nitro[5] == "lose":
-                losses = losses + 1
-                betSize = betSize + float(nitro[3])
-                netProfit = netProfit - float(nitro[3])
-                units = units - (float(nitro[3])/unitSize)
-            if nitro[5] == "push":
-                pushes = pushes + 1
+
+            if (len(nitro) < 10):
+                if nitro[5] == "win":
+                    wins = wins + 1
+                    betSize = betSize + float(nitro[3])
+                    netProfit = netProfit + float(nitro[4])
+                    units = units + (float(nitro[4])/unitSize)
+                if nitro[5] == "lose":
+                    losses = losses + 1
+                    betSize = betSize + float(nitro[3])
+                    netProfit = netProfit - float(nitro[3])
+                    units = units - (float(nitro[3])/unitSize)
+                if nitro[5] == "push":
+                    pushes = pushes + 1
+            else:
+                if nitro[5] == "win" and nitro[13] == "win":
+                    wins = wins + 1
+                    betSize = betSize + float(nitro[len(nitro)-1].split(" ")[0])
+                    netProfit = netProfit + float(nitro[len(nitro)-1].split(" ")[0])
+                    units = units + (float(nitro[len(nitro)-1].split(" ")[0])/unitSize)
+                else:
+                    losses = losses + 1
+                    betSize = betSize + float(nitro[len(nitro)-2].split(" ")[0])
+                    netProfit = netProfit - float(nitro[len(nitro)-2].split(" ")[0])
+                    units = units - (float(nitro[len(nitro)-2].split(" ")[0])/unitSize)
+
 
     elif (betType == "ML"):
 
@@ -165,7 +179,6 @@ def getData():
 
     betslips = []
     temp = []
-    count = 0
 
     for line in f:
         line = line.strip('\n')
@@ -177,12 +190,9 @@ def getData():
         # Parse out Blank lines and Parlays
         if len(line) is not 0:
             temp.append(line)
-            count = count + 1
         else:
-            if (count < 16):
-                betslips.append(temp)
+            betslips.append(temp)
             temp = []
-            count = 0
 
     # to remove empty lists (spaces)
     bets = [x for x in betslips if x]
