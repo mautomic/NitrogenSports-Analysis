@@ -26,7 +26,9 @@ import requests
 PRICE_JSON = requests.get('https://api.coinbase.com/v2/prices/spot?currency=USD')
 BTC = float(PRICE_JSON.json()['data']['amount'])
 
-bankroll = 0.13522
+
+# Enter your bankroll size
+bankroll = 0.0
 
 
 def main():
