@@ -52,7 +52,7 @@ def getRecord(betType, nitroList):
     betSize = 0.0
     netProfit = 0.0
     unitSize = .003
-    units = 0.0
+    units = 2
 
     if betType == "All":
 
@@ -151,9 +151,11 @@ def getRecord(betType, nitroList):
         posOrNeg = "+"
 
     unitString = format(units, '.2f')
+    percent = format(float(wins)*100/(float(wins)+float(losses)), '.2f')
 
     print(' ')
     print(str(wins) + "-" + str(losses) + "-" + str(pushes))
+    print(percent + "% Success Rate")
     print("Total Profit : " + str(netProfit) + " BTC")
     print("Total Profit : $" + str(netProfit * BTC))
     print("ROI : " + str((((netProfit + betSize) - betSize)/betSize) * 100) + "%")
@@ -165,12 +167,6 @@ def getRecord(betType, nitroList):
 
 # Function to perform calculations
 def calculate(betslips):
-    return []
-
-
-# Function to format any non-NitrogenSports bets to proper style. 
-# I also use CloudBet so this will adjust those bets
-def formatToNitro():
     return []
 
 
