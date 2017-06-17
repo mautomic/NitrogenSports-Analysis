@@ -28,7 +28,7 @@ BTC = float(PRICE_JSON.json()['data']['amount'])
 
 
 # Enter your bankroll size
-bankroll = 0.0
+bankroll = 0.276
 
 
 def main():
@@ -39,12 +39,12 @@ def main():
     # Filter what you want
     #######################################
 
-    getRecord("All", betslips)
+    analyze("All", betslips)
 
     #######################################
 
 
-def getRecord(betType, nitroList):
+def analyze(betType, nitroList):
 
     wins = 0
     losses = 0
@@ -52,7 +52,7 @@ def getRecord(betType, nitroList):
     betSize = 0.0
     netProfit = 0.0
     unitSize = .003
-    units = 2
+    units = 0
 
     if betType == "All":
 
@@ -65,12 +65,10 @@ def getRecord(betType, nitroList):
                     wins = wins + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit + float(nitro[4])
-                    units = units + (float(nitro[4])/unitSize)
                 if nitro[5] == "lose":
                     losses = losses + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit - float(nitro[3])
-                    units = units - (float(nitro[3])/unitSize)
                 if nitro[5] == "push":
                     pushes = pushes + 1
             else:
@@ -78,12 +76,10 @@ def getRecord(betType, nitroList):
                     wins = wins + 1
                     betSize = betSize + float(nitro[len(nitro)-1].split(" ")[0])
                     netProfit = netProfit + float(nitro[len(nitro)-1].split(" ")[0])
-                    units = units + (float(nitro[len(nitro)-1].split(" ")[0])/unitSize)
                 else:
                     losses = losses + 1
                     betSize = betSize + float(nitro[len(nitro)-2].split(" ")[0])
                     netProfit = netProfit - float(nitro[len(nitro)-2].split(" ")[0])
-                    units = units - (float(nitro[len(nitro)-2].split(" ")[0])/unitSize)
 
 
     elif (betType == "ML"):
@@ -97,12 +93,10 @@ def getRecord(betType, nitroList):
                     wins = wins + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit + float(nitro[4])
-                    units = units + (float(nitro[4])/unitSize)
                 if nitro[5] == "lose":
                     losses = losses + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit - float(nitro[3])
-                    units = units - (float(nitro[3])/unitSize)
                 if nitro[5] == "push":
                     pushes = pushes + 1
 
@@ -117,12 +111,10 @@ def getRecord(betType, nitroList):
                         wins = wins + 1
                         betSize = betSize + float(nitro[3])
                         netProfit = netProfit + float(nitro[4])
-                        units = units + (float(nitro[4])/unitSize)
                     if nitro[5] == "lose":
                         losses = losses + 1
                         betSize = betSize + float(nitro[3])
                         netProfit = netProfit - float(nitro[3])
-                        units = units - (float(nitro[3])/unitSize)
                     if nitro[5] == "push":
                         pushes = pushes + 1
 
@@ -137,16 +129,15 @@ def getRecord(betType, nitroList):
                     wins = wins + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit + float(nitro[4])
-                    units = units + (float(nitro[4])/unitSize)
                 if nitro[5] == "lose":
                     losses = losses + 1
                     betSize = betSize + float(nitro[3])
                     netProfit = netProfit - float(nitro[3])
-                    units = units - (float(nitro[3])/unitSize)
                 if nitro[5] == "push":
                     pushes = pushes + 1
 
     posOrNeg = ""
+    units = netProfit/unitSize
     if (units > 0):
         posOrNeg = "+"
 
@@ -158,6 +149,7 @@ def getRecord(betType, nitroList):
     print(percent + "% Success Rate")
     print("Total Profit : " + str(netProfit) + " BTC")
     print("Total Profit : $" + str(netProfit * BTC))
+    #print("Total Bet Size: $" + str(betSize * BTC))
     print("ROI : " + str((((netProfit + betSize) - betSize)/betSize) * 100) + "%")
     print(posOrNeg + unitString + " units")
     print("Bitcoin : $" + str(BTC))
