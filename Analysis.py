@@ -53,51 +53,25 @@ def analyze(betslips):
             continue
 
         betType = getBetType(bet)
-        status = bet[0]
 
         if (betType == BetType.ML):
-            if (status == "push"):
-                mlMetrics.addPush()
-            else:
-                if (status == "win"):
-                    mlMetrics.addWin()
-                    mlMetrics.addNetProfit(bet[10])
-                elif (status == "lose"):
-                    mlMetrics.addLoss()
-                    mlMetrics.subtractNetProfit(bet[10])
-                mlMetrics.addBetSize(bet[9])
-
+            updateMetrics(mlMetrics, bet)
         elif (betType == BetType.SPREAD):
-            if (status == "push"):
-                spreadMetrics.addPush()
-            else:
-                if (status == "win"):
-                    spreadMetrics.addWin()
-                    spreadMetrics.addNetProfit(bet[10])
-                elif (status == "lose"):
-                    spreadMetrics.addLoss()
-                    spreadMetrics.subtractNetProfit(bet[10])
-                spreadMetrics.addBetSize(bet[9])
-
+            updateMetrics(spreadMetrics, bet)
         else: 
-            if (status == "push"):
-                overUnderMetrics.addPush()
-            else:
-                if (status == "win"):
-                    overUnderMetrics.addWin()
-                    overUnderMetrics.addNetProfit(bet[10])
-                elif (status == "lose"):
-                    overUnderMetrics.addLoss()
-                    overUnderMetrics.subtractNetProfit(bet[10])
-                overUnderMetrics.addBetSize(bet[9])
+            updateMetrics(overUnderMetrics, bet)
 
-    print("Skipped " + str(parlayCount) + " parlay bets")
+    print("Bitcoin : $" + str(BTC))
+    print("Bankroll : $" + str(bankroll * BTC))
+
     print("ML metrics")
     printStats(mlMetrics, unitSize)
     print("Spread metrics")
     printStats(spreadMetrics, unitSize)
     print("OverUnder metrics")
     printStats(overUnderMetrics, unitSize)
+
+    print("Skipped " + str(parlayCount) + " parlay bets")
 
 # Function to retrieve type of bet from betslip
 def getBetType(betslip):
@@ -109,6 +83,21 @@ def getBetType(betslip):
         return BetType.SPREAD
     elif "Over" in bet or "Under" in bet:
         return BetType.OVERUNDER
+
+# Function to update metrics for a type of bet based on the status of the bet
+def updateMetrics(metricSet, bet):
+
+    status = bet[0]
+    if (status == "push"):
+        metricSet.addPush()
+    else:
+        if (status == "win"):
+            metricSet.addWin()
+            metricSet.addNetProfit(bet[10])
+        elif (status == "lose"):
+            metricSet.addLoss()
+            metricSet.subtractNetProfit(bet[10])
+        metricSet.addBetSize(bet[9])
 
 # Function that takes in a metricSet and prints all relevant stats
 def printStats(metricSet, unitSize):
@@ -134,8 +123,6 @@ def printStats(metricSet, unitSize):
     print("Total Profit : $" + str(netProfit * BTC))
     print("ROI : " + str((((netProfit + betSize) - betSize)/betSize) * 100) + "%")
     print(posOrNeg + unitString + " units")
-    print("Bitcoin : $" + str(BTC))
-    print("Bankroll : $" + str(bankroll * BTC))
     print("-------------------")
 
 # Function to open csv of data and parse it into a list of betslips
