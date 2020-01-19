@@ -18,7 +18,10 @@ virtualenv venv
 pip install -r requirements.txt
 ```
 
-Download a file from NitrogenSports with your entire wager history, and format it as a .txt in plain text. Put the wagers.txt file in the same directory as these scripts and run `python3 analysis.py`. You will have to update the analysis.py script for a different filter.
+#### Update as of January 2020
+NitrogenSports has changed the format of the wager history file, it now downloads as a CSV named MyWagers.csv.
+
+Put the csv file in the same directory as these scripts and run `python3 analysis.py`. You can also load up analysis.py in your preferred editor and run from there.
 
 ### About
 Although it started out as a personal script and customized specifically for me, I'm expecting this to become a more general tool for anyone. Perhaps even generalize it for sportsbooks beyond Nitrogen. 
