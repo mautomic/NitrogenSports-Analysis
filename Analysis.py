@@ -15,112 +15,109 @@
 
 import requests
 import csv
+from betType import BetType
+from metricSet import MetricSet
 
 # Retrieve current Bitcoin spot price via Coinbase
 PRICE_JSON = requests.get('https://api.coinbase.com/v2/prices/spot?currency=USD')
 BTC = float(PRICE_JSON.json()['data']['amount'])
 
 # Enter your bankroll size
-bankroll = 0.276
+bankroll = 0.15
 
 def main():
 
     betslips = getData()
+    analyze(betslips)
 
-    # Filter what you want, ie. All, ML, Spread, OverUnder
-    analyze("All", betslips)
+# Function that performs the main analysis
+def analyze(betslips):
 
-def analyze(betType, nitroList):
+    mlMetrics = MetricSet(0, 0, 0, 0.0, 0.0)
+    spreadMetrics = MetricSet(0, 0, 0, 0.0, 0.0)
+    overUnderMetrics = MetricSet(0, 0, 0, 0.0, 0.0)
+    unitSize = .01
+    parlayCount = 0
 
-    wins = 0
-    losses = 0
-    pushes = 0
-    betSize = 0.0
-    netProfit = 0.0
-    unitSize = .003
-    units = 0
+    for bet in betslips:
 
-    if betType == "All":
+        # filter out header
+        if (bet[0] == "Status"):
+            continue
 
-        for nitro in nitroList:
+        # TODO: add support for parlay tracking
+        # a more structured approach would be to add the betslip ID to a dictionary,
+        # and then find all bets with the same ID to analyze the parlay results
+        if (bet[1] == "parlay"):
+            parlayCount = parlayCount + 1
+            continue
 
-            print(nitro)
+        betType = getBetType(bet)
+        status = bet[0]
 
-            if (len(nitro) < 10):
-                if nitro[5] == "win":
-                    wins = wins + 1
-                    betSize = betSize + float(nitro[3])
-                    netProfit = netProfit + float(nitro[4])
-                if nitro[5] == "lose":
-                    losses = losses + 1
-                    betSize = betSize + float(nitro[3])
-                    netProfit = netProfit - float(nitro[3])
-                if nitro[5] == "push":
-                    pushes = pushes + 1
+        if (betType == BetType.ML):
+            if (status == "push"):
+                mlMetrics.addPush()
             else:
-                if nitro[5] == "win" and nitro[13] == "win":
-                    wins = wins + 1
-                    betSize = betSize + float(nitro[len(nitro)-1].split(" ")[0])
-                    netProfit = netProfit + float(nitro[len(nitro)-1].split(" ")[0])
-                else:
-                    losses = losses + 1
-                    betSize = betSize + float(nitro[len(nitro)-2].split(" ")[0])
-                    netProfit = netProfit - float(nitro[len(nitro)-2].split(" ")[0])
+                if (status == "win"):
+                    mlMetrics.addWin()
+                    mlMetrics.addNetProfit(bet[10])
+                elif (status == "lose"):
+                    mlMetrics.addLoss()
+                    mlMetrics.subtractNetProfit(bet[10])
+                mlMetrics.addBetSize(bet[9])
 
+        elif (betType == BetType.SPREAD):
+            if (status == "push"):
+                spreadMetrics.addPush()
+            else:
+                if (status == "win"):
+                    spreadMetrics.addWin()
+                    spreadMetrics.addNetProfit(bet[10])
+                elif (status == "lose"):
+                    spreadMetrics.addLoss()
+                    spreadMetrics.subtractNetProfit(bet[10])
+                spreadMetrics.addBetSize(bet[9])
 
-    elif (betType == "ML"):
+        else: 
+            if (status == "push"):
+                overUnderMetrics.addPush()
+            else:
+                if (status == "win"):
+                    overUnderMetrics.addWin()
+                    overUnderMetrics.addNetProfit(bet[10])
+                elif (status == "lose"):
+                    overUnderMetrics.addLoss()
+                    overUnderMetrics.subtractNetProfit(bet[10])
+                overUnderMetrics.addBetSize(bet[9])
 
-        for nitro in nitroList:
+    print("Skipped " + str(parlayCount) + " parlay bets")
+    print("ML metrics")
+    printStats(mlMetrics, unitSize)
+    print("Spread metrics")
+    printStats(spreadMetrics, unitSize)
+    print("OverUnder metrics")
+    printStats(overUnderMetrics, unitSize)
 
-            if "ML" in nitro[1]:
-                 
-                print(nitro)
-                if nitro[5] == "win":
-                    wins = wins + 1
-                    betSize = betSize + float(nitro[3])
-                    netProfit = netProfit + float(nitro[4])
-                if nitro[5] == "lose":
-                    losses = losses + 1
-                    betSize = betSize + float(nitro[3])
-                    netProfit = netProfit - float(nitro[3])
-                if nitro[5] == "push":
-                    pushes = pushes + 1
+# Function to retrieve type of bet from betslip
+def getBetType(betslip):
+    
+    bet = betslip[7]
+    if "ML" in bet:
+        return BetType.ML
+    elif "-" in bet or "+" in bet:
+        return BetType.SPREAD
+    elif "Over" in bet or "Under" in bet:
+        return BetType.OVERUNDER
 
-    elif (betType == "Spread"):
+# Function that takes in a metricSet and prints all relevant stats
+def printStats(metricSet, unitSize):
 
-        for nitro in nitroList:
-
-                if "+" in nitro[1] or "-" in nitro[1]: 
-                     
-                    print(nitro)
-                    if nitro[5] == "win":
-                        wins = wins + 1
-                        betSize = betSize + float(nitro[3])
-                        netProfit = netProfit + float(nitro[4])
-                    if nitro[5] == "lose":
-                        losses = losses + 1
-                        betSize = betSize + float(nitro[3])
-                        netProfit = netProfit - float(nitro[3])
-                    if nitro[5] == "push":
-                        pushes = pushes + 1
-
-    elif (betType == "OverUnder"):
-
-        for nitro in nitroList:
-            
-            if " over " in nitro[1] or " under " in nitro[1] or " Over " in nitro[1] or " Under " in nitro[1]:
-                     
-                print(nitro)
-                if nitro[5] == "win":
-                    wins = wins + 1
-                    betSize = betSize + float(nitro[3])
-                    netProfit = netProfit + float(nitro[4])
-                if nitro[5] == "lose":
-                    losses = losses + 1
-                    betSize = betSize + float(nitro[3])
-                    netProfit = netProfit - float(nitro[3])
-                if nitro[5] == "push":
-                    pushes = pushes + 1
+    wins = metricSet.wins
+    losses = metricSet.losses
+    pushes = metricSet.pushes
+    betSize = metricSet.betSize
+    netProfit = metricSet.netProfit
 
     posOrNeg = ""
     units = netProfit/unitSize
@@ -130,25 +127,18 @@ def analyze(betType, nitroList):
     unitString = format(units, '.2f')
     percent = format(float(wins)*100/(float(wins)+float(losses)), '.2f')
 
-    print(' ')
+    print("-------------------")
     print(str(wins) + "-" + str(losses) + "-" + str(pushes))
     print(percent + "% Success Rate")
     print("Total Profit : " + str(netProfit) + " BTC")
     print("Total Profit : $" + str(netProfit * BTC))
-    #print("Total Bet Size: $" + str(betSize * BTC))
     print("ROI : " + str((((netProfit + betSize) - betSize)/betSize) * 100) + "%")
     print(posOrNeg + unitString + " units")
     print("Bitcoin : $" + str(BTC))
     print("Bankroll : $" + str(bankroll * BTC))
-    print(' ')
+    print("-------------------")
 
-
-# Function to perform calculations
-def calculate(betslips):
-    return []
-
-
-# Function to open file of data and parse it into a list of betslips
+# Function to open csv of data and parse it into a list of betslips
 def getData():
 
     f = open('MyWagers.csv', 'r')
