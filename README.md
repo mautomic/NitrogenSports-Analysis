@@ -1,8 +1,5 @@
 ## NitrogenSports-Analysis
 
-[![Join the chat at https://gitter.im/NitrogenSports-Analysis/Lobby](https://badges.gitter.im/NitrogenSports-Analysis/Lobby.svg)](https://gitter.im/NitrogenSports-Analysis/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-Quantitative Analysis on NitrogenSports Data
-
 This script is meant for filtering out your wager results (including ROI, Records, and Profit) using various bet types (ML, Spread, OverUnder) and various sports. 
 
 ### Setup
