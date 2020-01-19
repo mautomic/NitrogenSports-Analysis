@@ -1,48 +1,34 @@
 # Nitrogen Sports Betting Analysis
 
-# Format of NS Betslip ---------- list size 9
-# Game
-# Game Prediction
-# Odds
-# Risk BTC
-# Winnings BTC
-# Win/Lose
+### Updated Jan 2020
+# Format of NitrogenSports Betslip 
+# Bet type
+# Betslip Id
+# Date
 # Sport
-# Subcategory
-# Betslip ID
-
-# Format of NS parlays ------- list size 8x + 5, 21, 29
-# Individual Risk/Winnings 0.0
-# 8 lines then start next bet (8 lines)...and etc
-# Betslip ID
-# Parlay Keyword
+# League
+# Event
+# Wager
 # Odds
-# Risk BTC
-# Winnings BTC
+# Risk
+# To Win
 
 import requests
+import csv
 
 # Retrieve current Bitcoin spot price via Coinbase
 PRICE_JSON = requests.get('https://api.coinbase.com/v2/prices/spot?currency=USD')
 BTC = float(PRICE_JSON.json()['data']['amount'])
 
-
 # Enter your bankroll size
 bankroll = 0.276
 
-
 def main():
 
-    # get data in organized list
     betslips = getData()
 
-    # Filter what you want
-    #######################################
-
+    # Filter what you want, ie. All, ML, Spread, OverUnder
     analyze("All", betslips)
-
-    #######################################
-
 
 def analyze(betType, nitroList):
 
@@ -165,28 +151,12 @@ def calculate(betslips):
 # Function to open file of data and parse it into a list of betslips
 def getData():
 
-    f = open('Wagers.txt', 'r')
-
+    f = open('MyWagers.csv', 'r')
+    data = csv.reader(f, delimiter=',')
     betslips = []
-    temp = []
-
-    for line in f:
-        line = line.strip('\n')
-
-        # break to start after model following, continue for prior
-        if "PHASE" in line:
-            break
-
-        # Parse out Blank lines and Parlays
-        if len(line) is not 0:
-            temp.append(line)
-        else:
-            betslips.append(temp)
-            temp = []
-
-    # to remove empty lists (spaces)
-    bets = [x for x in betslips if x]
-    return bets
+    for line in data:
+        betslips.append(line)
+    return betslips
  
 if __name__ == '__main__':
     main()
